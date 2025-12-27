@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -12,31 +13,32 @@ const Navbar = () => {
         
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <Link
-            href="/"
-            className="w-10 h-10 bg-[#FDE047] rounded-lg flex items-center justify-center shadow-sm"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              className="w-6 h-6 text-black"
-              fill="currentColor"
-            >
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-            </svg>
-          </Link>
+  <Link
+    href="/"
+    className="w-10 h-10 rounded-lg flex items-center justify-center shadow-sm bg-white"
+  >
+    <Image
+      src="/logo1.png"
+      alt="ROPACA Logo"
+      width={40}
+      height={40}
+      className="object-contain"
+      priority
+    />
+  </Link>
 
-          <div className="leading-tight">
-            <Link
-              href="/"
-              className="text-lg font-black tracking-tight text-[#0F172A]"
-            >
-              ROPACA
-            </Link>
-            <p className="text-[9px] font-bold tracking-widest uppercase text-slate-400">
-              Work for Accuracy
-            </p>
-          </div>
-        </div>
+  <div className="leading-tight">
+    <Link
+      href="/"
+      className="text-lg font-black tracking-tight text-[#0F172A]"
+    >
+      ROPACA
+    </Link>
+    <p className="text-[9px] font-bold tracking-widest uppercase text-slate-400">
+      Work for Accuracy
+    </p>
+  </div>
+</div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10">
