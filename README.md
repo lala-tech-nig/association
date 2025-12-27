@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Using the provided screens
+
+1. Copy the supplied `stitch_ropaca_home_page` folder (from your attachments/downloads) into `public/screens/` in this project.
+	- After copying, the home screen should be available at `public/screens/stitch_ropaca_home_page/ropaca_home_page/code.html`.
+2. Start the dev server (`npm run dev`) and open `http://localhost:3000`.
+3. Use the header navigation to view each screen. Each route loads the corresponding attached HTML inside an iframe.
+
+If you want the HTML embedded directly into React (instead of an iframe), I can inline or convert them into React components.
