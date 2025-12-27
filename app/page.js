@@ -30,7 +30,7 @@ const ROPACALandingPage = () => {
               PRECISION IN <br /> <span className="text-[#FFD700]">EVERY PILE</span>
             </h1>
             <p className="text-gray-200 max-w-md mb-8 leading-relaxed">
-              The Rotary Piles & Casings Association of Lagos State (ROPACA) sets the standards for heavy construction, safety, and professional integrity.
+              The Rotary Pilers And Casters Association of Lagos state (ROPACA) sets the standards for heavy construction, safety, and professional integrity.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-[#FFD700] text-[#001F3F] px-8 py-4 font-bold flex items-center gap-2 hover:bg-yellow-500 transition">

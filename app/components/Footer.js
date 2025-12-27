@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
             <div>
               <h3 className="text-white text-lg font-bold">ROPACA</h3>
-              <p className="text-xs text-slate-300 uppercase tracking-widest">Rotary Pilers & Coasters Association</p>
+              <p className="text-xs text-slate-300 uppercase tracking-widest">Rotary Pilers And Casters Association of Lagos state</p>
             </div>
           </div>
 
