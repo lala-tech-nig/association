@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Button from "../components/Button";
 import { 
   HardHat, 
   Search, 
@@ -156,7 +157,8 @@ export default function RopacaWebsite() {
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-[#FFD700] selection:text-[#001F3F]">
-      <Navbar />
+      
+      {/* Navbar replaced by global Nav component in layout */}
       <FeaturedHeader />
       
       {/* News Grid Section (image_55ac47.jpg) */}
@@ -219,7 +221,7 @@ export default function RopacaWebsite() {
             ))}
           </div>
 
-          <button className="w-full mt-20 py-4 bg-[#001F3F] text-white font-black text-[10px] uppercase tracking-widest rounded-xl hover:bg-slate-800 transition-all">Load More Articles</button>
+          <Button onClick={() => alert('Loading more articles...')} className="w-full mt-20 py-4 bg-[#001F3F] text-white font-black text-[10px] uppercase tracking-widest rounded-xl">Load More Articles</Button>
         </div>
 
         {/* Sidebar */}
@@ -299,47 +301,7 @@ export default function RopacaWebsite() {
         <p className="text-white/20 text-[9px] font-bold uppercase tracking-widest mt-8">No spam. Unsubscribe at any time.</p>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#001F3F] text-white pt-24 pb-12 px-6 md:px-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-16 mb-24">
-          <div>
-            <div className="flex items-center gap-2 mb-8">
-              <div className="bg-[#FFD700] p-1.5 rounded">
-                <HardHat size={20} className="text-[#001F3F]" />
-              </div>
-              <span className="font-black tracking-tighter text-2xl">ROPACA</span>
-            </div>
-            <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-relaxed">
-              2024 Rotary Piles & Caster's Association. All rights reserved. Providing the standards for heavy construction excellence.
-            </p>
-          </div>
-          <div>
-            <h5 className="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-white/40">Quick Links</h5>
-            <ul className="space-y-4 text-[11px] font-black uppercase tracking-widest text-slate-400">
-              <li className="hover:text-white cursor-pointer transition-colors">About Us</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Membership Portal</li>
-              <li className="hover:text-white cursor-pointer transition-colors">News & Updates</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Constitution</li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-white/40">Contact</h5>
-            <ul className="space-y-6 text-[11px] font-bold text-slate-400">
-              <li className="flex gap-4"><MapPin size={16} className="text-[#FFD700] shrink-0" /> 123 Industrial Avenue, Ikeja, Lagos State, Nigeria</li>
-              <li className="flex gap-4"><Phone size={16} className="text-[#FFD700] shrink-0" /> +234 800 ROPACA</li>
-              <li className="flex gap-4 lowercase"><Mail size={16} className="text-[#FFD700] shrink-0" /> secretariat@ropaca.ng</li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-white/40">Legal</h5>
-            <ul className="space-y-4 text-[11px] font-black uppercase tracking-widest text-slate-400">
-              <li className="hover:text-white cursor-pointer">Privacy Policy</li>
-              <li className="hover:text-white cursor-pointer">Terms of Service</li>
-              <li className="hover:text-white cursor-pointer">Cookie Settings</li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 }

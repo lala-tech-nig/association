@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "../components/Button";
 import { 
   Users, ShieldCheck, Scale, Megaphone, 
   Search, HardHat, Mail, MapPin, 
@@ -44,36 +45,7 @@ const RopacaExecutivePage = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
-      {/* Navigation */}
-      <nav className="bg-[#1a1a1a]/90 backdrop-blur-md text-white py-4 px-6 md:px-16 flex justify-between items-center sticky top-0 z-50">
-        <div className="flex items-center gap-2">
-          <div className="bg-[#FFD700] p-1 rounded">
-            <HardHat size={20} className="text-[#001F3F]" />
-          </div>
-          <span className="font-bold tracking-tighter text-xl">ROPACA</span>
-        </div>
-        
-        <div className="hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest">
-          <a href="#" className="hover:text-[#FFD700]">Home</a>
-          <a href="#" className="hover:text-[#FFD700]">About Us</a>
-          <a href="#" className="text-[#FFD700]">Executive Council</a>
-          <a href="#" className="hover:text-[#FFD700]">Events</a>
-          <a href="#" className="hover:text-[#FFD700]">Membership</a>
-          
-          <div className="relative ml-4">
-            <input 
-              type="text" 
-              placeholder="Search members..." 
-              className="bg-white/10 border border-white/20 rounded py-1 px-3 text-[10px] w-48 focus:outline-none focus:border-[#FFD700]"
-            />
-            <Search size={14} className="absolute right-2 top-2 text-white/40" />
-          </div>
-        </div>
-
-        <button className="bg-[#FFD700] text-[#001F3F] px-5 py-2 text-[11px] font-black uppercase">
-          Join ROPACA
-        </button>
-      </nav>
+      
 
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center text-center px-6 overflow-hidden bg-[#001F3F]">
@@ -105,8 +77,8 @@ const RopacaExecutivePage = () => {
             <p className="text-slate-400 text-xs mt-1">Meet the council members steering our vision.</p>
           </div>
           <div className="flex gap-2">
-            <button className="p-2 bg-slate-100 text-[#001F3F] rounded"><Grid size={18}/></button>
-            <button className="p-2 text-slate-300 hover:bg-slate-50 rounded transition"><List size={18}/></button>
+            <Button onClick={() => alert('Grid view')} variant="secondary" className="p-2 rounded"><Grid size={18}/></Button>
+            <Button onClick={() => alert('List view')} variant="secondary" className="p-2 rounded"><List size={18}/></Button>
           </div>
         </div>
 
@@ -132,7 +104,7 @@ const RopacaExecutivePage = () => {
                 </p>
                 <div className="flex justify-between items-center pt-4 border-t border-slate-50">
                   <span className="text-[10px] font-bold text-slate-300 uppercase">{exec.id}</span>
-                  <ArrowRight size={14} className="text-slate-300 group-hover:text-[#FFD700] transition-colors" />
+                  <Button onClick={() => alert(`Open profile ${exec.name}`)} variant="secondary" className="p-0"><ArrowRight size={14} className="text-slate-300 group-hover:text-[#FFD700]" /></Button>
                 </div>
               </div>
             </div>
@@ -230,63 +202,7 @@ const RopacaExecutivePage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#111] text-white pt-20 pb-10 px-6 md:px-16">
-        <div className="grid md:grid-cols-4 gap-12 mb-20">
-          <div className="col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="bg-[#FFD700] p-1 rounded">
-                <HardHat size={18} className="text-[#001F3F]" />
-              </div>
-              <span className="font-bold tracking-tighter text-lg">ROPACA</span>
-            </div>
-            <p className="text-[11px] text-slate-500 leading-relaxed mb-6">
-              Rotary Piles & Casings Association of Lagos State. Setting the standard for foundational engineering excellence.
-            </p>
-            <div className="flex gap-4 opacity-50">
-              <Facebook size={16} /> <Twitter size={16} /> <Linkedin size={16} />
-            </div>
-          </div>
-          
-          <div>
-            <h5 className="text-xs font-black uppercase mb-6 tracking-widest">Quick Links</h5>
-            <ul className="text-[11px] text-slate-500 space-y-3">
-              <li className="hover:text-white cursor-pointer transition">About ROPACA</li>
-              <li className="hover:text-white cursor-pointer transition">Executive Council</li>
-              <li className="hover:text-white cursor-pointer transition">Membership Portal</li>
-              <li className="hover:text-white cursor-pointer transition">Constitution</li>
-            </ul>
-          </div>
-
-          <div className="col-span-1">
-            <h5 className="text-xs font-black uppercase mb-6 tracking-widest">Contact</h5>
-            <div className="space-y-4 text-[11px] text-slate-500">
-              <div className="flex gap-3"><MapPin size={14} className="text-[#FFD700]"/> 123 Industrial Avenue, Ikeja, Lagos State, Nigeria</div>
-              <div className="flex gap-3"><Phone size={14} className="text-[#FFD700]"/> +234 800 ROPACA</div>
-              <div className="flex gap-3"><Mail size={14} className="text-[#FFD700]"/> secretariat@ropaca.ng</div>
-            </div>
-          </div>
-
-          <div>
-            <h5 className="text-xs font-black uppercase mb-6 tracking-widest">Newsletter</h5>
-            <p className="text-[10px] text-slate-500 mb-4">Stay updated with industry news.</p>
-            <div className="flex">
-              <input type="email" placeholder="Email Address" className="bg-white/5 border border-white/10 px-4 py-2 text-xs w-full focus:outline-none focus:border-[#FFD700]" />
-              <button className="bg-[#FFD700] text-[#001F3F] p-2 flex items-center justify-center">
-                <ArrowRight size={16} />
-              </button>
-            </div>
-          </div>
-        </div>
-        
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between text-[10px] text-slate-600 font-bold uppercase tracking-widest">
-          <p>© 2024 ROPACA. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 };

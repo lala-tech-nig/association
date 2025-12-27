@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import Button from "../components/Button";
 import { 
   Mail, 
   PhoneCall, 
@@ -17,25 +20,7 @@ import {
 const ContactPage = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
-      {/* Navigation */}
-      <nav className="bg-white border-b border-slate-100 py-4 px-6 md:px-20 flex justify-between items-center sticky top-0 z-50">
-        <div className="flex items-center gap-2">
-          <div className="bg-[#FFD700] p-1.5 rounded shadow-sm">
-            <HardHat size={20} className="text-[#001F3F]" />
-          </div>
-          <span className="font-black tracking-tighter text-xl text-[#001F3F]">ROPACA</span>
-        </div>
-        <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
-          <a href="#" className="hover:text-[#001F3F]">Home</a>
-          <a href="#" className="hover:text-[#001F3F]">About</a>
-          <a href="#" className="hover:text-[#001F3F]">Projects</a>
-          <a href="#" className="hover:text-[#001F3F]">Membership</a>
-          <a href="#" className="text-[#001F3F] border-b-2 border-[#FFD700] pb-1">Contact</a>
-        </div>
-        <button className="bg-[#001F3F] text-white px-6 py-2.5 rounded text-[11px] font-bold uppercase tracking-widest hover:bg-slate-800 transition-all">
-          Join ROPACA
-        </button>
-      </nav>
+      
 
       {/* Hero Header */}
       <section className="relative pt-24 pb-32 bg-[#001F3F] text-center px-6 overflow-hidden">
@@ -108,9 +93,7 @@ const ContactPage = () => {
             <p className="text-blue-600 text-[10px] font-black uppercase tracking-[0.4em] mb-3">Administrative Center</p>
             <h2 className="text-4xl font-black text-[#001F3F] uppercase tracking-tighter">Lagos Headquarters</h2>
           </div>
-          <button className="flex items-center gap-2 bg-white border border-slate-200 px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-slate-500 hover:bg-slate-50 transition-all">
-            <Navigation size={14} /> Get Directions
-          </button>
+          <Button onClick={() => alert('Opening map...')} className="flex items-center gap-2 bg-white border border-slate-200 px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-slate-500"> <Navigation size={14} /> Get Directions</Button>
         </div>
 
         <div className="grid md:grid-cols-2 rounded-[40px] overflow-hidden shadow-2xl border border-slate-100 h-[500px]">
@@ -150,9 +133,7 @@ const ContactPage = () => {
             <p className="text-blue-600 text-[10px] font-black uppercase tracking-[0.4em] mb-3">Technical Yard</p>
             <h2 className="text-4xl font-black text-[#001F3F] uppercase tracking-tighter">Ogun Operational Hub</h2>
           </div>
-          <button className="flex items-center gap-2 bg-white border border-slate-200 px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-slate-500 hover:bg-slate-50 transition-all">
-            <Navigation size={14} /> Get Directions
-          </button>
+          <Button onClick={() => alert('Opening map...')} className="flex items-center gap-2 bg-white border border-slate-200 px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-slate-500"> <Navigation size={14} /> Get Directions</Button>
         </div>
 
         <div className="grid md:grid-cols-2 rounded-[40px] overflow-hidden shadow-2xl border border-slate-100 h-[500px]">
@@ -188,69 +169,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#001F3F] text-white pt-24 pb-12 px-6 md:px-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-16 mb-24">
-          <div className="col-span-1">
-            <div className="flex items-center gap-2 mb-8">
-              <div className="bg-[#FFD700] p-1.5 rounded">
-                <HardHat size={18} className="text-[#001F3F]" />
-              </div>
-              <span className="font-black tracking-tighter text-xl">ROPACA</span>
-            </div>
-            <p className="text-slate-400 text-[11px] leading-relaxed uppercase font-bold tracking-widest opacity-60">
-              Advancing the standards of piling and casting professions through unity, safety, and innovation.
-            </p>
-            <div className="flex gap-4 mt-8">
-              <div className="p-2 bg-white/5 rounded-full hover:bg-blue-600 transition-colors cursor-pointer"><Facebook size={16}/></div>
-              <div className="p-2 bg-white/5 rounded-full hover:bg-blue-400 transition-colors cursor-pointer"><Twitter size={16}/></div>
-              <div className="p-2 bg-white/5 rounded-full hover:bg-pink-600 transition-colors cursor-pointer"><Instagram size={16}/></div>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-white/40">Quick Links</h4>
-            <ul className="space-y-4 text-[10px] font-black uppercase tracking-widest text-slate-400">
-              <li className="hover:text-[#FFD700] cursor-pointer transition-colors">About Us</li>
-              <li className="hover:text-[#FFD700] cursor-pointer transition-colors">Our Projects</li>
-              <li className="hover:text-[#FFD700] cursor-pointer transition-colors">Membership Portal</li>
-              <li className="hover:text-[#FFD700] cursor-pointer transition-colors">News & Events</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-white/40">Contact</h4>
-            <ul className="space-y-6 text-[11px] font-bold text-slate-400">
-              <li className="flex gap-4"><Mail size={16} className="text-[#FFD700] shrink-0" /> info@ropaca.ng</li>
-              <li className="flex gap-4"><PhoneCall size={16} className="text-[#FFD700] shrink-0" /> +234 800 123 4567</li>
-              <li className="flex gap-4 uppercase tracking-widest leading-relaxed"><MapPin size={16} className="text-[#FFD700] shrink-0" /> Lagos & Ogun States, Nigeria</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-white/40">Social</h4>
-            <div className="flex flex-col gap-4">
-               <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition-colors cursor-pointer">
-                 <Facebook size={14} /> Facebook
-               </div>
-               <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition-colors cursor-pointer">
-                 <Twitter size={14} /> Twitter
-               </div>
-               <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition-colors cursor-pointer">
-                 <Instagram size={14} /> Instagram
-               </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between text-[9px] font-black text-slate-600 uppercase tracking-[0.5em] pt-12 border-t border-white/5">
-          <p>© 2024 Rotary Piles & Caster's Association. All rights reserved.</p>
-          <div className="flex gap-8 mt-4 md:mt-0">
-            <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Terms of Service</span>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 };

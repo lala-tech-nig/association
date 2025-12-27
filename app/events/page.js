@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "../components/Button";
 import { 
   Play, 
   ChevronLeft, 
@@ -14,25 +15,7 @@ import {
 const AnniversaryEventsPage = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
-      {/* Navigation */}
-      <nav className="bg-white/90 backdrop-blur-md py-4 px-6 md:px-20 flex justify-between items-center sticky top-0 z-50 border-b border-slate-100">
-        <div className="flex items-center gap-2">
-          <div className="bg-[#FFD700] p-1 rounded">
-            <HardHat size={20} className="text-[#001F3F]" />
-          </div>
-          <span className="font-black tracking-tighter text-xl text-[#001F3F]">ROPACA</span>
-        </div>
-        <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
-          <a href="#" className="hover:text-[#001F3F]">Home</a>
-          <a href="#" className="hover:text-[#001F3F]">About</a>
-          <a href="#" className="hover:text-[#001F3F]">Gallery</a>
-          <a href="#" className="text-[#001F3F] border-b-2 border-[#FFD700] pb-1">Events</a>
-          <a href="#" className="hover:text-[#001F3F]">Contact</a>
-        </div>
-        <button className="bg-[#FFD700] text-[#001F3F] px-6 py-2 rounded text-[11px] font-black uppercase shadow-sm">
-          Donate
-        </button>
-      </nav>
+      
 
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center px-6 md:px-20 overflow-hidden bg-[#001F3F]">
@@ -57,12 +40,8 @@ const AnniversaryEventsPage = () => {
             Honoring the past, building the future. Join us in celebrating 10 years of ROPACA's excellence in piling and casting across Lagos State.
           </p>
           <div className="flex gap-4">
-            <button className="bg-[#FFD700] text-[#001F3F] px-8 py-4 rounded-full font-black text-xs uppercase flex items-center gap-2 hover:scale-105 transition-transform">
-              <Play size={14} fill="currentColor" /> Watch Documentary
-            </button>
-            <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-black text-xs uppercase hover:bg-white/20 transition-all">
-              View Gallery
-            </button>
+            <Button onClick={() => alert('Playing documentary...')} variant="primary" className="flex items-center gap-2"><Play size={14} /> Watch Documentary</Button>
+            <Button href="/projects" variant="secondary">View Gallery</Button>
           </div>
         </div>
       </section>
@@ -74,9 +53,9 @@ const AnniversaryEventsPage = () => {
             <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-2">The Celebration</p>
             <h2 className="text-3xl font-black text-[#001F3F] uppercase tracking-tight">The Gala Night in Pictures</h2>
           </div>
-          <div className="flex gap-3">
-            <button className="p-3 rounded-full border border-slate-200 text-slate-400 hover:text-[#001F3F] hover:border-[#FFD700] transition-all"><ChevronLeft size={20}/></button>
-            <button className="p-3 rounded-full bg-[#FFD700] text-[#001F3F] shadow-lg shadow-yellow-200 transition-all"><ChevronRight size={20}/></button>
+            <div className="flex gap-3">
+            <Button onClick={() => alert('Prev')} variant="secondary" className="p-3 rounded-full border"> <ChevronLeft size={20}/> </Button>
+            <Button onClick={() => alert('Next')} variant="primary" className="p-3 rounded-full"> <ChevronRight size={20}/> </Button>
           </div>
         </div>
 
@@ -162,7 +141,7 @@ const AnniversaryEventsPage = () => {
               <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Stay Connected</p>
               <h2 className="text-3xl font-black text-[#001F3F] uppercase tracking-tight">Upcoming Events</h2>
             </div>
-            <button className="px-6 py-2 border border-slate-200 rounded-lg text-[10px] font-black uppercase text-slate-400 hover:bg-white transition-all">View Calendar</button>
+            <Button href="/events/calendar" variant="secondary" className="px-6 py-2 border border-slate-200 rounded-lg text-[10px] font-black uppercase text-slate-400">View Calendar</Button>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -213,9 +192,9 @@ const AnniversaryEventsPage = () => {
                       <MapPin size={14} className="text-[#FFD700]" /> <span className="text-[10px] font-bold uppercase">{event.loc}</span>
                     </div>
                   </div>
-                  <button className={`w-full py-3 rounded-xl font-black text-[10px] uppercase tracking-widest transition-all ${i === 0 ? 'bg-[#FFD700] text-[#001F3F]' : 'border border-slate-100 text-slate-400 hover:bg-slate-50'}`}>
+                  <Button onClick={() => alert('Thanks — we registered your interest!')} className={`w-full py-3 rounded-xl font-black text-[10px] uppercase tracking-widest ${i === 0 ? 'bg-[#FFD700] text-[#001F3F]' : 'border border-slate-100 text-slate-400'}`}>
                     {i === 0 ? 'RSVP Now' : i === 2 ? 'Get Tickets' : 'Register Interest'}
-                  </button>
+                  </Button>
                 </div>
               </div>
             ))}
@@ -223,24 +202,7 @@ const AnniversaryEventsPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#111] text-white pt-20 pb-10 px-6 md:px-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-          <div className="flex items-center gap-2">
-            <div className="bg-[#FFD700] p-1 rounded">
-              <HardHat size={18} className="text-[#001F3F]" />
-            </div>
-            <span className="font-black tracking-tighter text-lg">ROPACA</span>
-          </div>
-          <p className="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em]">Rotary Piles & Caster's Association of Lagos State</p>
-          <div className="flex gap-8 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-            <span className="hover:text-white cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer">Terms of Service</span>
-            <span className="hover:text-white cursor-pointer">Contact</span>
-          </div>
-        </div>
-        <p className="text-center text-[9px] text-slate-700 font-black uppercase tracking-[0.5em]">© 2024 ROPACA. All rights reserved.</p>
-      </footer>
+      
     </div>
   );
 };

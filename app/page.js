@@ -12,32 +12,7 @@ const ROPACALandingPage = () => {
 
   return (
     <div className="font-sans text-gray-900 bg-white">
-      {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-[#001F3F]/90 backdrop-blur-md text-white py-4 px-6 md:px-12 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <div className="bg-[#FFD700] p-1 rounded">
-            <Construction size={24} className="text-[#001F3F]" />
-          </div>
-          <span className="font-bold text-2xl tracking-tighter">ROPACA</span>
-        </div>
-        
-        <div className="hidden md:flex gap-8 text-sm font-medium uppercase tracking-wider">
-          <a href="#" className="hover:text-[#FFD700] transition">Home</a>
-          <a href="#" className="hover:text-[#FFD700] transition">About</a>
-          <a href="#" className="hover:text-[#FFD700] transition">Services</a>
-          <a href="#" className="hover:text-[#FFD700] transition">Projects</a>
-          <a href="#" className="hover:text-[#FFD700] transition">Membership</a>
-        </div>
-
-        <button className="hidden md:block border-2 border-white px-6 py-2 hover:bg-white hover:text-[#001F3F] transition font-bold text-sm">
-          JOIN US
-        </button>
-
-        <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X /> : <Menu />}
-        </button>
-      </nav>
-
+      
       {/* Hero Section */}
       <section className="relative h-screen flex items-center pt-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -242,64 +217,6 @@ const ROPACALandingPage = () => {
           ))}
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-[#001F3F] pt-20 pb-10 px-6 md:px-24 border-t border-white/5">
-        <div className="grid md:grid-cols-4 gap-12 mb-20">
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="bg-[#FFD700] p-1 rounded">
-                <Construction size={20} className="text-[#001F3F]" />
-              </div>
-              <span className="font-bold text-xl text-white">ROPACA</span>
-            </div>
-            <p className="text-gray-400 text-xs leading-relaxed mb-6">
-              Rotary Piles & Casings Association of Lagos State. Dedicated to accuracy, safety, and advancement of heavy construction professionals.
-            </p>
-            <div className="flex gap-4">
-              <Facebook size={18} className="text-gray-400 hover:text-[#FFD700] cursor-pointer transition" />
-              <Twitter size={18} className="text-gray-400 hover:text-[#FFD700] cursor-pointer transition" />
-              <Linkedin size={18} className="text-gray-400 hover:text-[#FFD700] cursor-pointer transition" />
-            </div>
-          </div>
-
-          <div>
-            <h5 className="text-white font-black text-xs uppercase mb-6 tracking-widest">Quick Links</h5>
-            <ul className="text-gray-400 text-xs space-y-4 font-bold">
-              <li><a href="#" className="hover:text-white transition">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition">Membership</a></li>
-              <li><a href="#" className="hover:text-white transition">Verify Professional</a></li>
-              <li><a href="#" className="hover:text-white transition">Projects Gallery</a></li>
-            </ul>
-          </div>
-
-          <div className="col-span-1 md:col-span-2">
-            <h5 className="text-white font-black text-xs uppercase mb-6 tracking-widest">Contact Info</h5>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex gap-4 text-gray-400">
-                <MapPin size={18} className="text-[#FFD700] shrink-0" />
-                <span className="text-xs leading-relaxed">1 Lagos State Boulevard, Alausa, Ikeja.</span>
-              </div>
-              <div className="flex gap-4 text-gray-400">
-                <Mail size={18} className="text-[#FFD700] shrink-0" />
-                <span className="text-xs">info@ropaca.org</span>
-              </div>
-              <div className="flex gap-4 text-gray-400">
-                <Phone size={18} className="text-[#FFD700] shrink-0" />
-                <span className="text-xs">+234 800 ROPACA</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[10px] text-gray-500 font-bold uppercase tracking-widest">
-          <p>© 2024 ROPACA. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

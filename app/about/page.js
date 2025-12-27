@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "../components/Button";
 import { 
   History, Target, Shield, HardHat, 
   Gem, Users, Mail, Phone, MapPin, 
@@ -8,25 +9,7 @@ import {
 const RopacaAboutPage = () => {
   return (
     <div className="bg-white font-sans text-slate-900">
-      {/* Navigation */}
-      <nav className="bg-[#001F3F] text-white py-4 px-6 md:px-20 flex justify-between items-center sticky top-0 z-50">
-        <div className="flex items-center gap-2">
-          <div className="bg-[#FFD700] p-1 rounded">
-            <HardHat size={20} className="text-[#001F3F]" />
-          </div>
-          <span className="font-bold tracking-tighter text-xl">ROPACA</span>
-        </div>
-        <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest">
-          <a href="#" className="hover:text-[#FFD700]">Home</a>
-          <a href="#" className="text-[#FFD700]">About Us</a>
-          <a href="#" className="hover:text-[#FFD700]">Membership</a>
-          <a href="#" className="hover:text-[#FFD700]">Projects</a>
-          <a href="#" className="hover:text-[#FFD700]">Contact</a>
-        </div>
-        <button className="bg-[#FFD700] text-[#001F3F] px-5 py-2 text-[11px] font-black uppercase rounded-sm">
-          Join Association
-        </button>
-      </nav>
+      
 
       {/* Header Section */}
       <header className="py-20 px-6 text-center max-w-4xl mx-auto">
@@ -70,9 +53,7 @@ const RopacaAboutPage = () => {
                 <p className="text-sm text-slate-500 leading-relaxed mb-6">
                   A group of 12 piling specialists gathered in a small office in Lagos Island to discuss safety standards and a construction boom. What started as a safety meeting became a movement.
                 </p>
-                <button className="text-[11px] font-bold flex items-center gap-2 group">
-                  Read Minutes <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                </button>
+                <Button href="/about#minutes" className="text-[11px] font-bold flex items-center gap-2 group" variant="secondary">Read Minutes <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" /></Button>
               </div>
               <div className="h-40 bg-slate-200 rounded-lg overflow-hidden grayscale">
                 <img src="https://images.unsplash.com/photo-1503387762-592dec5832f2?auto=format&fit=crop&q=60" className="w-full h-full object-cover" alt="Foundation" />
@@ -144,9 +125,7 @@ const RopacaAboutPage = () => {
               </p>
             </div>
           </div>
-          <button className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest group">
-            Read Our Full Constitution <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
-          </button>
+          <Button href="/about#constitution" className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest group" variant="secondary">Read Our Full Constitution <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" /></Button>
         </div>
       </section>
 
@@ -183,61 +162,7 @@ const RopacaAboutPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#0a0a0a] text-white pt-20 pb-10 px-6 md:px-20">
-        <div className="grid md:grid-cols-4 gap-12 mb-20">
-          <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="bg-[#FFD700] p-1 rounded">
-                <HardHat size={16} className="text-[#001F3F]" />
-              </div>
-              <span className="font-bold tracking-tighter">ROPACA</span>
-            </div>
-            <p className="text-[11px] text-slate-500 leading-relaxed">
-              Rotary Piles & Casings Association of Lagos State. Setting the foundation for a stronger, safer construction industry.
-            </p>
-            <div className="flex gap-4">
-              <Facebook size={16} className="text-slate-500 hover:text-white cursor-pointer" />
-              <Twitter size={16} className="text-slate-500 hover:text-white cursor-pointer" />
-            </div>
-          </div>
-          
-          <div>
-            <h6 className="text-[#FFD700] text-[10px] font-black uppercase mb-6 tracking-widest">Quick Links</h6>
-            <ul className="text-[11px] text-slate-500 space-y-4">
-              <li className="hover:text-white cursor-pointer">• History</li>
-              <li className="hover:text-white cursor-pointer">• Executive Team</li>
-              <li className="hover:text-white cursor-pointer">• Membership Portal</li>
-              <li className="hover:text-white cursor-pointer">• Safety Guidelines</li>
-            </ul>
-          </div>
-
-          <div>
-            <h6 className="text-[#FFD700] text-[10px] font-black uppercase mb-6 tracking-widest">Contact</h6>
-            <ul className="text-[11px] text-slate-500 space-y-4">
-              <li className="flex gap-3"><MapPin size={14} className="text-[#FFD700]" /> Plot 48, Ikeja Secretariat Road, Lagos State, Nigeria</li>
-              <li className="flex gap-3"><Mail size={14} className="text-[#FFD700]" /> secretariat@ropaca.ng</li>
-              <li className="flex gap-3"><Phone size={14} className="text-[#FFD700]" /> +234 800 ROPACA</li>
-            </ul>
-          </div>
-
-          <div>
-            <h6 className="text-[#FFD700] text-[10px] font-black uppercase mb-6 tracking-widest">Newsletter</h6>
-            <p className="text-[11px] text-slate-500 mb-4">Subscribe for industry updates and safety alerts.</p>
-            <div className="flex">
-              <input type="email" placeholder="Email Address" className="bg-white/5 border border-white/10 px-4 py-2 text-xs w-full outline-none focus:border-[#FFD700]" />
-              <button className="bg-[#FFD700] text-[#001F3F] px-4 py-2 font-bold text-xs flex items-center"><ChevronRight size={16}/></button>
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-white/5 pt-8 flex justify-between text-[10px] text-slate-600 font-medium uppercase tracking-widest">
-          <p>© 2024 ROPACA. All rights reserved.</p>
-          <div className="flex gap-6">
-            <span className="hover:text-white cursor-pointer transition">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer transition">Terms of Use</span>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 };

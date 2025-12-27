@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "../components/Button";
 import { 
   HardHat, CheckCircle2, ChevronLeft, ChevronRight, 
   ArrowRight, Mail, Phone, MapPin, Globe, 
@@ -8,25 +9,7 @@ import {
 const MembershipPage = () => {
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-900">
-      {/* Navigation */}
-      <nav className="bg-white border-b border-slate-100 py-4 px-6 md:px-20 flex justify-between items-center sticky top-0 z-50">
-        <div className="flex items-center gap-2">
-          <div className="bg-[#FFD700] p-1.5 rounded-lg shadow-sm">
-            <HardHat size={22} className="text-[#001F3F]" />
-          </div>
-          <span className="font-black tracking-tighter text-2xl text-[#001F3F]">ROPACA</span>
-        </div>
-        <div className="hidden md:flex gap-10 text-[12px] font-bold uppercase tracking-widest text-slate-500">
-          <a href="#" className="hover:text-[#001F3F] transition-colors">Home</a>
-          <a href="#" className="hover:text-[#001F3F] transition-colors">About</a>
-          <a href="#" className="hover:text-[#001F3F] transition-colors">Events</a>
-          <a href="#" className="text-[#001F3F] border-b-2 border-[#FFD700] pb-1">Membership</a>
-          <a href="#" className="hover:text-[#001F3F] transition-colors">Contact</a>
-        </div>
-        <button className="bg-[#001F3F] text-white px-6 py-2.5 rounded-full text-[12px] font-bold uppercase tracking-wider hover:bg-slate-800 transition-all shadow-md">
-          Join Now
-        </button>
-      </nav>
+      
 
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 px-6 md:px-20 overflow-hidden bg-white">
@@ -45,12 +28,8 @@ const MembershipPage = () => {
               The premier association for pilers and casters in Lagos State. Elevate your craft, expand your network, and shape the infrastructure of tomorrow.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-[#FFD700] text-[#001F3F] px-8 py-4 font-black text-sm uppercase rounded-xl hover:bg-yellow-400 transition-all shadow-lg shadow-yellow-200">
-                Apply for Membership
-              </button>
-              <button className="bg-white border-2 border-slate-100 text-slate-600 px-8 py-4 font-bold text-sm uppercase rounded-xl hover:bg-slate-50 transition-all">
-                View Benefits
-              </button>
+              <Button href="/membership/apply" className="px-8 py-4 font-black text-sm uppercase rounded-xl" variant="primary">Apply for Membership</Button>
+              <Button href="/membership/benefits" className="px-8 py-4 font-bold text-sm uppercase rounded-xl" variant="secondary">View Benefits</Button>
             </div>
           </div>
           <div className="relative">
@@ -96,9 +75,7 @@ const MembershipPage = () => {
                 <p className="text-slate-500 text-sm leading-relaxed mb-8">
                   Access world-class safety protocols and continuous professional development workshops tailored for Lagos' unique terrain. Stay ahead of compliance.
                 </p>
-                <button className="flex items-center gap-2 text-[11px] font-black uppercase tracking-widest text-[#001F3F] border-b-2 border-[#FFD700] pb-1 hover:gap-4 transition-all">
-                  Learn More <ArrowRight size={14} />
-                </button>
+                <Button href="/membership/training" className="flex items-center gap-2 text-[11px] font-black uppercase tracking-widest text-[#001F3F] border-b-2 border-[#FFD700] pb-1">Learn More <ArrowRight size={14} /></Button>
               </div>
             </div>
             {/* Card 2 (Partial view imitation) */}
@@ -111,9 +88,7 @@ const MembershipPage = () => {
                 <p className="text-slate-500 text-sm leading-relaxed mb-8">
                   Regular standard checks and certifications that boost your firm's credibility in the eyes of major developers and state regulators.
                 </p>
-                <button className="flex items-center gap-2 text-[11px] font-black uppercase tracking-widest text-[#001F3F] border-b-2 border-[#FFD700] pb-1">
-                  Learn More <ArrowRight size={14} />
-                </button>
+                <Button href="/membership/inspection" className="flex items-center gap-2 text-[11px] font-black uppercase tracking-widest text-[#001F3F] border-b-2 border-[#FFD700] pb-1">Learn More <ArrowRight size={14} /></Button>
               </div>
             </div>
           </div>
@@ -148,7 +123,7 @@ const MembershipPage = () => {
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-2xl border-2 border-slate-100 font-black text-[12px] uppercase tracking-widest text-[#001F3F] hover:bg-slate-50 transition-all">Apply Now</button>
+              <Button href="/membership/apply" className="w-full py-4 rounded-2xl border-2 border-slate-100 font-black text-[12px] uppercase tracking-widest text-[#001F3F]">Apply Now</Button>
             </div>
           </div>
 
@@ -172,7 +147,7 @@ const MembershipPage = () => {
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-2xl bg-[#FFD700] font-black text-[12px] uppercase tracking-widest text-[#001F3F] hover:bg-yellow-400 transition-all">Apply Now</button>
+              <Button href="/membership/apply" className="w-full py-4 rounded-2xl bg-[#FFD700] font-black text-[12px] uppercase tracking-widest text-[#001F3F]">Apply Now</Button>
             </div>
           </div>
 
@@ -195,7 +170,7 @@ const MembershipPage = () => {
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-2xl border-2 border-slate-100 font-black text-[12px] uppercase tracking-widest text-[#001F3F] hover:bg-slate-50 transition-all">Apply Now</button>
+              <Button href="/membership/apply" className="w-full py-4 rounded-2xl border-2 border-slate-100 font-black text-[12px] uppercase tracking-widest text-[#001F3F]">Apply Now</Button>
             </div>
           </div>
         </div>
@@ -215,62 +190,7 @@ const MembershipPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#001F3F] text-white pt-24 pb-12 px-6 md:px-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-16 mb-20">
-          <div className="col-span-1 md:col-span-1">
-             <div className="flex items-center gap-2 mb-8">
-              <div className="bg-[#FFD700] p-1.5 rounded-lg">
-                <HardHat size={20} className="text-[#001F3F]" />
-              </div>
-              <span className="font-black tracking-tighter text-2xl">ROPACA</span>
-            </div>
-            <p className="text-slate-400 text-sm leading-relaxed mb-8">
-              The Rotary Piles & Caster's Association of Lagos State. Committed to raising the standards of foundation engineering and construction safety across Nigeria.
-            </p>
-            <div className="flex gap-4">
-              <div className="p-2 bg-white/5 rounded-full hover:bg-[#FFD700]/20 cursor-pointer transition-colors"><Globe size={18}/></div>
-              <div className="p-2 bg-white/5 rounded-full hover:bg-[#FFD700]/20 cursor-pointer transition-colors"><Twitter size={18}/></div>
-              <div className="p-2 bg-white/5 rounded-full hover:bg-[#FFD700]/20 cursor-pointer transition-colors"><Instagram size={18}/></div>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-[#FFD700]">Quick Links</h4>
-            <ul className="space-y-4 text-sm font-bold text-slate-400 uppercase tracking-widest text-[10px]">
-              <li className="hover:text-white cursor-pointer transition-colors">About Us</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Membership Types</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Events Calendar</li>
-              <li className="hover:text-white cursor-pointer transition-colors">News & Updates</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-[#FFD700]">Contact</h4>
-            <ul className="space-y-6 text-sm text-slate-400">
-              <li className="flex gap-4"><MapPin size={18} className="text-[#FFD700] shrink-0" /> 123 Construction Avenue, Ikeja, Lagos State, Nigeria</li>
-              <li className="flex gap-4"><Phone size={18} className="text-[#FFD700] shrink-0" /> +234 800 ROPACA</li>
-              <li className="flex gap-4"><Mail size={18} className="text-[#FFD700] shrink-0" /> info@ropaca.org</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-[#FFD700]">Newsletter</h4>
-            <p className="text-sm text-slate-400 mb-6">Stay updated with industry news.</p>
-            <div className="flex gap-2">
-              <input type="email" placeholder="Email Address" className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm w-full focus:outline-none focus:border-[#FFD700] transition-all" />
-              <button className="bg-[#FFD700] text-[#001F3F] p-3 rounded-xl hover:bg-yellow-400 transition-all"><ArrowRight size={20}/></button>
-            </div>
-          </div>
-        </div>
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-          <p>© 2024 ROPACA. All rights reserved.</p>
-          <div className="flex gap-8 mt-4 md:mt-0">
-            <span className="hover:text-white cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer">Terms of Service</span>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 };

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Button from "../components/Button";
 import { 
   Play, 
   Grid, 
@@ -42,25 +43,7 @@ const ProjectGalleryPage = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
-      {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-slate-100 py-4 px-6 md:px-20 flex justify-between items-center sticky top-0 z-50">
-        <div className="flex items-center gap-2">
-          <div className="bg-[#FFD700] p-1.5 rounded shadow-sm">
-            <Construction size={20} className="text-[#001F3F]" />
-          </div>
-          <span className="font-black tracking-tighter text-xl text-[#001F3F]">ROPACA</span>
-        </div>
-        <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
-          <a href="#" className="hover:text-[#001F3F]">Home</a>
-          <a href="#" className="hover:text-[#001F3F]">About</a>
-          <a href="#" className="text-[#001F3F] border-b-2 border-[#FFD700] pb-1">Projects</a>
-          <a href="#" className="hover:text-[#001F3F]">Membership</a>
-          <a href="#" className="hover:text-[#001F3F]">Contact</a>
-        </div>
-        <button className="bg-[#001F3F] text-white px-5 py-2.5 rounded text-[11px] font-bold uppercase tracking-widest hover:bg-slate-800 transition-all">
-          Join ROPACA
-        </button>
-      </nav>
+      
 
       {/* Hero Header */}
       <section className="relative h-[60vh] flex items-center justify-center text-center px-6 overflow-hidden bg-[#001F3F]">
@@ -84,14 +67,9 @@ const ProjectGalleryPage = () => {
           <p className="text-white/60 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
             A comprehensive documentary of piling, casting, and fabrication defining the skyline of Lagos State.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-[#FFD700] text-[#001F3F] px-8 py-4 rounded-full font-black text-xs uppercase flex items-center gap-3 hover:scale-105 transition-transform shadow-xl shadow-yellow-500/20">
-              <div className="bg-[#001F3F] rounded-full p-1"><Play size={12} className="text-white" fill="currentColor"/></div>
-              Watch Showreel
-            </button>
-            <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-black text-xs uppercase hover:bg-white/20 transition-all">
-              View Gallery
-            </button>
+            <div className="flex flex-wrap justify-center gap-4">
+            <Button onClick={() => alert('Playing showreel...')} variant="primary" className="flex items-center gap-3"><div className="bg-[#001F3F] rounded-full p-1"><Play size={12} className="text-white"/></div>Watch Showreel</Button>
+            <Button href="/projects#gallery" variant="secondary">View Gallery</Button>
           </div>
         </div>
       </section>
@@ -143,9 +121,7 @@ const ProjectGalleryPage = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <button className="inline-flex items-center gap-3 px-8 py-4 border-2 border-slate-100 rounded-full text-xs font-black uppercase tracking-[0.2em] text-[#001F3F] hover:bg-slate-50 transition-all">
-            Load More Projects <ArrowRight size={16} />
-          </button>
+          <Button onClick={() => alert('Loading more projects...')} className="inline-flex items-center gap-3 px-8 py-4 border-2 border-slate-100 rounded-full text-xs font-black uppercase tracking-[0.2em] text-[#001F3F]">Load More Projects <ArrowRight size={16} /></Button>
         </div>
       </section>
 
@@ -193,67 +169,7 @@ const ProjectGalleryPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#111] text-white pt-24 pb-12 px-6 md:px-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-16 mb-24">
-          <div className="col-span-1">
-            <div className="flex items-center gap-2 mb-8">
-              <div className="bg-[#FFD700] p-1.5 rounded">
-                <Construction size={18} className="text-[#001F3F]" />
-              </div>
-              <span className="font-black tracking-tighter text-xl">ROPACA</span>
-            </div>
-            <p className="text-slate-500 text-xs leading-relaxed">
-              The Rotary Piles & Caster's Association of Lagos State. Dedicated to setting standards and advancing the engineering infrastructure of Nigeria.
-            </p>
-            <div className="flex gap-4 mt-8">
-              <div className="p-2 bg-white/5 rounded-full hover:bg-[#FFD700]/20 cursor-pointer transition-colors"><Twitter size={16}/></div>
-              <div className="p-2 bg-white/5 rounded-full hover:bg-[#FFD700]/20 cursor-pointer transition-colors"><Instagram size={16}/></div>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-[#FFD700] text-[10px] font-black uppercase tracking-[0.4em] mb-10">Quick Links</h4>
-            <ul className="space-y-4 text-xs font-bold text-slate-500 uppercase tracking-widest">
-              <li className="hover:text-white cursor-pointer transition-colors">Our Projects</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Member Directory</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Safety Guidelines</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Events Calendar</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[#FFD700] text-[10px] font-black uppercase tracking-[0.4em] mb-10">Contact Secretariat</h4>
-            <ul className="space-y-6 text-xs text-slate-500 font-medium">
-              <li className="flex gap-4"><Mail size={16} className="text-[#FFD700] shrink-0" /> secretariat@ropaca.ng</li>
-              <li className="flex gap-4"><Phone size={16} className="text-[#FFD700] shrink-0" /> +234 800 ROPACA</li>
-              <li className="flex gap-4"><MapPin size={16} className="text-[#FFD700] shrink-0" /> Engineering Close, Ikeja, Lagos State</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[#FFD700] text-[10px] font-black uppercase tracking-[0.4em] mb-10">Newsletter</h4>
-            <div className="flex bg-white/5 border border-white/10 rounded-lg overflow-hidden focus-within:border-[#FFD700] transition-colors">
-              <input 
-                type="email" 
-                placeholder="Email Address" 
-                className="bg-transparent px-4 py-3 text-xs w-full outline-none text-white" 
-              />
-              <button className="bg-[#FFD700] text-[#001F3F] p-3 hover:bg-yellow-400 transition-all">
-                <ArrowRight size={18} />
-              </button>
-            </div>
-          </div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between text-[9px] font-black text-slate-600 uppercase tracking-[0.3em]">
-          <p>© 2024 ROPACA. All rights reserved.</p>
-          <div className="flex gap-8 mt-4 md:mt-0">
-            <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Terms of Use</span>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 };
