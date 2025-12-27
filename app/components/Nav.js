@@ -42,16 +42,11 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-10">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/about">About</NavLink>
-
-          <Link
-            href="/projects"
-            className="relative font-black text-[#0F172A]"
-          >
-            Projects
-            <span className="absolute -bottom-2 left-0 w-full h-[3px] bg-[#FDE047] rounded-full" />
-          </Link>
-
+          <NavLink href="/events">Events</NavLink>
           <NavLink href="/membership">Membership</NavLink>
+          <NavLink href="/news">News</NavLink>
+          <NavLink href="/executive-council">Executive Council</NavLink>
+          <NavLink href="/projects">Projects</NavLink>
           <NavLink href="/contact">Contact</NavLink>
 
           <Link
@@ -121,17 +116,24 @@ const Navbar = () => {
 export default Navbar;
 
 /* -------------------- */
-/* Reusable Nav Link */
+/* Reusable Nav Link (dynamic active state) */
 /* -------------------- */
-const NavLink = ({ href, children, mobile }) => (
-  <Link
-    href={href}
-    className={`${
-      mobile
-        ? "text-sm font-black uppercase tracking-widest text-[#0F172A]"
-        : "text-sm font-semibold text-slate-600 hover:text-[#0F172A]"
-    } transition`}
-  >
-    {children}
-  </Link>
-);
+import { usePathname } from 'next/navigation';
+
+const NavLink = ({ href, children, mobile }) => {
+  const pathname = usePathname() || '/';
+  const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href);
+
+  const baseClass = mobile
+    ? 'text-sm font-black uppercase tracking-widest text-[#0F172A]'
+    : 'text-sm font-semibold text-slate-600 hover:text-[#0F172A]';
+
+  return (
+    <Link href={href} className={`transition ${baseClass} ${!mobile && isActive ? 'text-[#0F172A] font-black relative inline-block' : ''}`}>
+      {children}
+      {!mobile && isActive && (
+        <span className="absolute -bottom-2 left-0 w-full h-[3px] bg-[#FDE047] rounded-full" />
+      )}
+    </Link>
+  );
+};
