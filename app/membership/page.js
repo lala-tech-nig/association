@@ -31,7 +31,7 @@ const MembershipPage = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button href="/membership/apply" className="px-8 py-4 font-black text-sm uppercase rounded-xl" variant="primary">Apply for Membership</Button>
-              <Button href="/membership/benefits" className="px-8 py-4 font-bold text-sm uppercase rounded-xl" variant="secondary">View Benefits</Button>
+              <Button href="/members" className="px-8 py-4 font-bold text-sm uppercase rounded-xl" variant="secondary">View Benefits</Button>
             </div>
           </div>
           <div className="relative">

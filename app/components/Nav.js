@@ -110,6 +110,9 @@ const Navbar = () => {
             Join ROPACA
           </Link>
         </div>
+        <div>
+          X
+        </div>
       </aside>
     </header>
   );
