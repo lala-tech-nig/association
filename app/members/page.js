@@ -97,13 +97,13 @@ const Page = () => {
                       rel="noopener noreferrer"
                       className="group/btn flex items-center justify-center gap-2 w-full py-3 px-4 bg-slate-900 text-white rounded-2xl text-sm font-semibold hover:bg-indigo-600 transition-colors duration-300"
                     >
-                      <span>Explore Digital Space</span>
+                      <span>Visit My Website</span>
                       <ExternalLink className="w-4 h-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
                     </a>
                   ) : (
                     <div className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-slate-100 text-slate-400 rounded-2xl text-sm font-semibold italic cursor-not-allowed">
                       <Globe className="w-4 h-4 opacity-50" />
-                      Offline Presence
+                      No Website
                     </div>
                   )}
                 </div>
