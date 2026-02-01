@@ -1,56 +1,51 @@
 [
   {
-    "id": "SN/25/0001",
-    "name": "Alice Johnson",
+    "id": "SN/25/0038",
+    "name": "Kehinde Aluko",
     "image": "/1.jpeg",
-    "status": "active",
-    "website": "https://example.com/alice-johnson"
+    "status": "active"
   },
   {
-    "id": "SN/25/0002",
-    "name": "Carlos Mendez",
+    "id": "SN/25/0034",
+    "name": "Nurudeen Oladeji",
     "image": "/2.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
-    "id": "SN/25/0003",
-    "name": "Priya Singh",
+    "id": "SN/25/0035",
+    "name": "Omitola Riliwan",
     "image": "/3.jpeg",
-    "status": "banned",
-    "website": "https://example.com/priya-singh"
+    "status": "active"
   },
   {
-    "id": "SN/25/0004",
-    "name": "Marcus Lee",
+    "id": "SN/25/0023",
+    "name": "promise Oyakhirome",
     "image": "/4.jpeg",
-    "status": "blacklisted"
+    "status": "active"
   },
   {
-    "id": "SN/25/0005",
-    "name": "Sofia Rossi",
+    "id": "SN/25/0027",
+    "name": "Saidi Mustafa",
     "image": "/5.jpeg",
-    "status": "active",
-    "website": "https://example.com/sofia-rossi"
+    "status": "active"
   },
   {
-    "id": "SN/25/0006",
-    "name": "Daniel Kim",
+    "id": "SN/25/0031",
+    "name": "Adegoke Adeniyi",
     "image": "/6.jpeg",
     "status": "active"
   },
   {
-    "id": "SN/25/0007",
-    "name": "Elena Petrova",
+    "id": "SN/25/0025",
+    "name": "oyelowo Joshua Oyekunle",
     "image": "/7.jpeg",
-    "status": "suspended",
-    "website": "https://example.com/elena-petrova"
+    "status": "active"
   },
   {
     "id": "SN/25/0008",
     "name": "Ahmed Khan",
     "image": "/8.jpeg",
-    "status": "active",
-    "website": "https://example.com/ahmed-khan"
+    "status": "active"
   },
   {
     "id": "SN/25/0009",
@@ -62,20 +57,19 @@
     "id": "SN/25/0010",
     "name": "Samuel Okoye",
     "image": "/10.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0011",
     "name": "Fatima Bello",
     "image": "/11.jpeg",
-    "status": "active",
-    "website": "https://example.com/fatima-bello"
+    "status": "active"
   },
   {
     "id": "SN/25/0012",
     "name": "John Peterson",
     "image": "/12.jpeg",
-    "status": "banned"
+    "status": "active"
   },
   {
     "id": "SN/25/0013",
@@ -87,20 +81,19 @@
     "id": "SN/25/0014",
     "name": "Mohammed Saleh",
     "image": "/14.jpeg",
-    "status": "blacklisted"
+    "status": "active"
   },
   {
     "id": "SN/25/0015",
     "name": "Isabella Martinez",
     "image": "/15.jpeg",
-    "status": "active",
-    "website": "https://example.com/isabella-martinez"
+    "status": "active"
   },
   {
     "id": "SN/25/0016",
     "name": "David Brown",
     "image": "/16.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0017",
@@ -118,20 +111,19 @@
     "id": "SN/25/0019",
     "name": "Chen Wei",
     "image": "/19.jpeg",
-    "status": "banned"
+    "status": "active"
   },
   {
     "id": "SN/25/0020",
     "name": "Olivia Thompson",
     "image": "/20.jpeg",
-    "status": "active",
-    "website": "https://example.com/olivia-thompson"
+    "status": "active"
   },
   {
     "id": "SN/25/0021",
     "name": "Ibrahim Musa",
     "image": "/21.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0022",
@@ -143,7 +135,7 @@
     "id": "SN/25/0023",
     "name": "Paul Anderson",
     "image": "/23.jpeg",
-    "status": "blacklisted"
+    "status": "active"
   },
   {
     "id": "SN/25/0024",
@@ -155,14 +147,13 @@
     "id": "SN/25/0025",
     "name": "Hassan Ali",
     "image": "/25.jpeg",
-    "status": "active",
-    "website": "https://example.com/hassan-ali"
+    "status": "active"
   },
   {
     "id": "SN/25/0026",
     "name": "Emily Carter",
     "image": "/26.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0027",
@@ -174,7 +165,7 @@
     "id": "SN/25/0028",
     "name": "Rebecca Stone",
     "image": "/28.jpeg",
-    "status": "banned"
+    "status": "active"
   },
   {
     "id": "SN/25/0029",
@@ -186,7 +177,7 @@
     "id": "SN/25/0030",
     "name": "Mikhail Ivanov",
     "image": "/30.jpeg",
-    "status": "blacklisted"
+    "status": "active"
   },
   {
     "id": "SN/25/0031",
@@ -198,7 +189,7 @@
     "id": "SN/25/0032",
     "name": "Joseph Miller",
     "image": "/32.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0033",
@@ -210,14 +201,13 @@
     "id": "SN/25/0034",
     "name": "Lucas Silva",
     "image": "/34.jpeg",
-    "status": "active",
-    "website": "https://example.com/lucas-silva"
+    "status": "active"
   },
   {
     "id": "SN/25/0035",
     "name": "Hannah Moore",
     "image": "/35.jpeg",
-    "status": "banned"
+    "status": "active"
   },
   {
     "id": "SN/25/0036",
@@ -229,7 +219,7 @@
     "id": "SN/25/0037",
     "name": "Victor Hugo",
     "image": "/37.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0038",
@@ -241,7 +231,7 @@
     "id": "SN/25/0039",
     "name": "Abdul Rahman",
     "image": "/39.jpeg",
-    "status": "blacklisted"
+    "status": "active"
   },
   {
     "id": "SN/25/0040",
@@ -259,7 +249,7 @@
     "id": "SN/25/0042",
     "name": "Peter Novak",
     "image": "/42.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0043",
@@ -271,7 +261,7 @@
     "id": "SN/25/0044",
     "name": "Thomas Schmidt",
     "image": "/44.jpeg",
-    "status": "banned"
+    "status": "active"
   },
   {
     "id": "SN/25/0045",
@@ -289,7 +279,7 @@
     "id": "SN/25/0047",
     "name": "Kelvin Ojo",
     "image": "/47.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0048",
@@ -301,14 +291,13 @@
     "id": "SN/25/0049",
     "name": "Suleiman Danjuma",
     "image": "/49.jpeg",
-    "status": "blacklisted"
+    "status": "active"
   },
   {
     "id": "SN/25/0050",
     "name": "Jessica Adams",
     "image": "/50.jpeg",
-    "status": "active",
-    "website": "https://example.com/jessica-adams"
+    "status": "active"
   },
   {
     "id": "SN/25/0051",
@@ -320,7 +309,7 @@
     "id": "SN/25/0052",
     "name": "Laura Bennett",
     "image": "/52.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0053",
@@ -332,7 +321,7 @@
     "id": "SN/25/0054",
     "name": "Daniela Costa",
     "image": "/54.jpeg",
-    "status": "banned"
+    "status": "active"
   },
   {
     "id": "SN/25/0055",
@@ -350,7 +339,7 @@
     "id": "SN/25/0057",
     "name": "Safiya Abdallah",
     "image": "/57.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0058",
@@ -368,7 +357,7 @@
     "id": "SN/25/0060",
     "name": "Bashir Mohammed",
     "image": "/60.jpeg",
-    "status": "blacklisted"
+    "status": "active"
   },
   {
     "id": "SN/25/0061",
@@ -380,7 +369,7 @@
     "id": "SN/25/0062",
     "name": "Usman Sadiq",
     "image": "/62.jpeg",
-    "status": "suspended"
+    "status": "active"
   },
   {
     "id": "SN/25/0063",
@@ -398,7 +387,7 @@
     "id": "SN/25/0065",
     "name": "Julian Fischer",
     "image": "/65.jpeg",
-    "status": "banned"
+    "status": "active"
   },
   {
     "id": "SN/25/0066",
