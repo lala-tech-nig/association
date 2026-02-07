@@ -70,7 +70,7 @@ const Footer = () => {
           <div className="flex items-start gap-3 mb-3">
             <div className="text-[#FDE047] mt-1"><Mail size={18} /></div>
             <div>
-              <a href="mailto:secretariat@ropaca.ng" className="text-slate-300 hover:text-white transition">secretariat@ropaca.ng</a>
+              <a href="mailto:ropaca788@yahoomail.com" className="text-slate-300 hover:text-white transition">ropaca788@yahoomail.com</a>
               <div className="text-xs text-slate-400">Primary contact</div>
             </div>
           </div>
@@ -78,7 +78,7 @@ const Footer = () => {
           <div className="flex items-start gap-3 mb-3">
             <div className="text-[#FDE047] mt-1"><Phone size={18} /></div>
             <div>
-              <a href="tel:+234800ROPACA" className="text-slate-300 hover:text-white transition">+234 800 ROPACA</a>
+              <a href="tel:+2348032390450" className="text-slate-300 hover:text-white transition">+234 8032390450</a>
               <div className="text-xs text-slate-400">Support line</div>
             </div>
           </div>

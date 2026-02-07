@@ -2,13 +2,13 @@
 
 import React from 'react';
 import Button from "../components/Button";
-import { 
-  Play, 
-  ChevronLeft, 
-  ChevronRight, 
-  Calendar, 
-  Clock, 
-  MapPin, 
+import {
+  Play,
+  ChevronLeft,
+  ChevronRight,
+  Calendar,
+  Clock,
+  MapPin,
   ArrowRight,
   HardHat,
   Quote
@@ -17,25 +17,25 @@ import {
 const AnniversaryEventsPage = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
-      
+
 
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center px-6 md:px-20 overflow-hidden bg-[#001F3F]">
         <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80" 
+          <img
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80"
             className="w-full h-full object-cover opacity-30 grayscale"
             alt="Anniversary background"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F] to-transparent"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-3xl">
           <div className="flex gap-2 mb-6">
             <span className="bg-[#FFD700] text-[#001F3F] px-3 py-1 text-[10px] font-black uppercase tracking-widest">Since 2014</span>
             <span className="bg-white/10 backdrop-blur-md text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest border border-white/20">10th Anniversary</span>
           </div>
-          <h1 className="text-6xl md:text-8xl font-black text-white mb-6 tracking-tight leading-none">
+          <h1 className="text-4xl md:text-8xl font-black text-white mb-6 tracking-tight leading-none">
             A DECADE OF <br /> <span className="text-[#FFD700]">FOUNDATION</span>
           </h1>
           <p className="text-white/70 text-sm md:text-lg mb-10 leading-relaxed max-w-xl">
@@ -55,9 +55,9 @@ const AnniversaryEventsPage = () => {
             <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-2">The Celebration</p>
             <h2 className="text-3xl font-black text-[#001F3F] uppercase tracking-tight">The Gala Night in Pictures</h2>
           </div>
-            <div className="flex gap-3">
-            <Button onClick={() => alert('Prev')} variant="secondary" className="p-3 rounded-full border"> <ChevronLeft size={20}/> </Button>
-            <Button onClick={() => alert('Next')} variant="primary" className="p-3 rounded-full"> <ChevronRight size={20}/> </Button>
+          <div className="flex gap-3">
+            <Button onClick={() => alert('Prev')} variant="secondary" className="p-3 rounded-full border"> <ChevronLeft size={20} /> </Button>
+            <Button onClick={() => alert('Next')} variant="primary" className="p-3 rounded-full"> <ChevronRight size={20} /> </Button>
           </div>
         </div>
 
@@ -83,7 +83,7 @@ const AnniversaryEventsPage = () => {
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-slate-400 text-[10px] font-bold uppercase tracking-[0.4em] mb-4">Voices of ROPACA</p>
           <h2 className="text-center text-3xl font-black text-[#001F3F] uppercase mb-16 tracking-tight">Guest Highlights & Speeches</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {[
               { name: "Engr. Tunde Adeyemi", role: "President, ROPACA", text: "The resilience of our members over the last ten years has been the bedrock of Lagos State's infrastructure development. We are not just builders; we are the foundation." },
@@ -148,25 +148,25 @@ const AnniversaryEventsPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { 
-                date: { month: "OCT", day: "24" }, 
-                title: "Advanced Piling Techniques 2024", 
+              {
+                date: { month: "OCT", day: "24" },
+                title: "Advanced Piling Techniques 2024",
                 type: "Technical Workshop",
                 time: "10:00 AM",
                 loc: "Gaston & Color, VI",
                 img: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=80"
               },
-              { 
-                date: { month: "NOV", day: "15" }, 
-                title: "Q4 General Assembly", 
+              {
+                date: { month: "NOV", day: "15" },
+                title: "Q4 General Assembly",
                 type: "General Meeting",
                 time: "02:00 PM",
                 loc: "ROPACA HQ, Ikeja",
                 img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80"
               },
-              { 
-                date: { month: "DEC", day: "10" }, 
-                title: "End of Year Party", 
+              {
+                date: { month: "DEC", day: "10" },
+                title: "End of Year Party",
                 type: "Social",
                 time: "06:00 PM",
                 loc: "Eko Hotel, VI",
@@ -204,7 +204,7 @@ const AnniversaryEventsPage = () => {
         </div>
       </section>
 
-      
+
     </div>
   );
 };

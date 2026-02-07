@@ -2,16 +2,16 @@
 
 import React, { useState } from 'react';
 import Button from "../components/Button";
-import { 
-  HardHat, 
-  Search, 
-  ArrowRight, 
-  Clock, 
-  Calendar, 
-  ShieldCheck, 
-  Users, 
-  Download, 
-  ExternalLink, 
+import {
+  HardHat,
+  Search,
+  ArrowRight,
+  Clock,
+  Calendar,
+  ShieldCheck,
+  Users,
+  Download,
+  ExternalLink,
   Lock,
   ChevronRight,
   ChevronLeft,
@@ -21,36 +21,14 @@ import {
 } from 'lucide-react';
 
 // --- Navigation Component ---
-const Navbar = () => (
-  <nav className="bg-[#001F3F] text-white py-4 px-6 md:px-20 flex justify-between items-center sticky top-0 z-50 border-b border-white/10">
-    <div className="flex items-center gap-2">
-      <div className="bg-[#FFD700] p-1 rounded shadow-sm">
-        <HardHat size={22} className="text-[#001F3F]" />
-      </div>
-      <span className="font-black tracking-tighter text-2xl">ROPACA</span>
-    </div>
-    <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-white/70">
-      <a href="#" className="hover:text-white transition-colors">Home</a>
-      <a href="#" className="hover:text-white transition-colors">About</a>
-      <a href="#" className="hover:text-white transition-colors">Membership</a>
-      <a href="#" className="text-white border-b-2 border-[#FFD700] pb-1">News & Updates</a>
-      <a href="#" className="hover:text-white transition-colors">Contact</a>
-    </div>
-    <div className="flex items-center gap-4">
-      <Search size={18} className="text-white/50 cursor-pointer" />
-      <button className="bg-[#FFD700] text-[#001F3F] px-6 py-2 rounded font-black text-[11px] uppercase tracking-widest hover:bg-white transition-all flex items-center gap-2">
-        Join ROPACA <ArrowRight size={14} />
-      </button>
-    </div>
-  </nav>
-);
+// --- Navigation Component Removed (Using Global Nav) ---
 
 // --- Featured News Header (image_55ac47.jpg) ---
 const FeaturedHeader = () => (
   <header className="relative h-[60vh] flex items-center px-6 md:px-20 overflow-hidden bg-[#001F3F]">
     <div className="absolute inset-0">
-      <img 
-        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2000" 
+      <img
+        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2000"
         className="w-full h-full object-cover opacity-30 grayscale"
         alt="Featured News"
       />
@@ -65,8 +43,8 @@ const FeaturedHeader = () => (
         A comprehensive breakdown of the new government directives affecting all wetland construction sites, including mandatory soil testing and rig stability certifications.
       </p>
       <div className="flex items-center gap-6 text-white/40 text-[10px] font-bold uppercase tracking-widest">
-        <span className="flex items-center gap-2"><Calendar size={14} className="text-[#FFD700]"/> Oct 24, 2023</span>
-        <span className="flex items-center gap-2"><Clock size={14} className="text-[#FFD700]"/> 8 min read</span>
+        <span className="flex items-center gap-2"><Calendar size={14} className="text-[#FFD700]" /> Oct 24, 2023</span>
+        <span className="flex items-center gap-2"><Clock size={14} className="text-[#FFD700]" /> 8 min read</span>
       </div>
     </div>
   </header>
@@ -157,17 +135,17 @@ export default function RopacaWebsite() {
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-[#FFD700] selection:text-[#001F3F]">
-      
+
       {/* Navbar replaced by global Nav component in layout */}
       <FeaturedHeader />
-      
+
       {/* News Grid Section (image_55ac47.jpg) */}
       <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
         <div className="lg:w-2/3">
           {/* Tabs */}
           <div className="flex flex-wrap gap-4 mb-12 border-b border-slate-100 pb-8">
             {['All Updates', 'Safety', 'Association News', 'Industry Updates', 'Events'].map(tab => (
-              <button 
+              <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`px-6 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all ${activeTab === tab ? 'bg-[#001F3F] text-white' : 'bg-slate-50 text-slate-400 hover:bg-slate-100'}`}
@@ -180,28 +158,28 @@ export default function RopacaWebsite() {
           {/* Article List */}
           <div className="space-y-16">
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-               <div className="group cursor-pointer">
-                 <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <span className="absolute top-4 left-4 bg-red-600 text-white text-[9px] font-black px-2 py-1 rounded">SAFETY ALERT</span>
-                 </div>
-                 <p className="text-slate-400 text-[10px] font-bold uppercase mb-2">Maintenance • 2 Days Ago</p>
-                 <h3 className="text-xl font-black text-[#001F3F] mb-4 uppercase leading-tight group-hover:text-blue-600 transition-colors">Rig Maintenance in Rainy Season: Preventing Rust & Failure</h3>
-                 <p className="text-slate-500 text-xs leading-relaxed">With the rainy season approaching, our technical committee has released updated guidelines for...</p>
-               </div>
-               <div className="group cursor-pointer">
-                 <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <span className="absolute top-4 left-4 bg-[#001F3F] text-white text-[9px] font-black px-2 py-1 rounded">ASSOCIATION NEWS</span>
-                 </div>
-                 <p className="text-slate-400 text-[10px] font-bold uppercase mb-2">Events • 5 Days Ago</p>
-                 <h3 className="text-xl font-black text-[#001F3F] mb-4 uppercase leading-tight group-hover:text-blue-600 transition-colors">ROPACA Annual General Meeting 2024</h3>
-                 <p className="text-slate-500 text-xs leading-relaxed">Join us this December for the election of new officers and a review of the association's fiscal...</p>
-               </div>
+              <div className="group cursor-pointer">
+                <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative">
+                  <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <span className="absolute top-4 left-4 bg-red-600 text-white text-[9px] font-black px-2 py-1 rounded">SAFETY ALERT</span>
+                </div>
+                <p className="text-slate-400 text-[10px] font-bold uppercase mb-2">Maintenance • 2 Days Ago</p>
+                <h3 className="text-xl font-black text-[#001F3F] mb-4 uppercase leading-tight group-hover:text-blue-600 transition-colors">Rig Maintenance in Rainy Season: Preventing Rust & Failure</h3>
+                <p className="text-slate-500 text-xs leading-relaxed">With the rainy season approaching, our technical committee has released updated guidelines for...</p>
+              </div>
+              <div className="group cursor-pointer">
+                <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative">
+                  <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <span className="absolute top-4 left-4 bg-[#001F3F] text-white text-[9px] font-black px-2 py-1 rounded">ASSOCIATION NEWS</span>
+                </div>
+                <p className="text-slate-400 text-[10px] font-bold uppercase mb-2">Events • 5 Days Ago</p>
+                <h3 className="text-xl font-black text-[#001F3F] mb-4 uppercase leading-tight group-hover:text-blue-600 transition-colors">ROPACA Annual General Meeting 2024</h3>
+                <p className="text-slate-500 text-xs leading-relaxed">Join us this December for the election of new officers and a review of the association's fiscal...</p>
+              </div>
             </div>
 
             <h2 className="text-2xl font-black text-[#001F3F] uppercase border-l-4 border-[#FFD700] pl-6 mb-12">Industry Updates</h2>
-            
+
             {[
               { title: "Global Steel Prices: Impact on Local Construction", tag: "INDUSTRY UPDATES", img: "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80" },
               { title: "Updated Certification Standards for 2024", tag: "REGULATION", img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80" },
@@ -215,7 +193,7 @@ export default function RopacaWebsite() {
                   <span className="text-blue-600 text-[9px] font-black uppercase tracking-widest mb-3">{item.tag} • Nov 01, 2023</span>
                   <h4 className="text-2xl font-black text-[#001F3F] uppercase leading-tight mb-4 group-hover:text-blue-600 transition-colors">{item.title}</h4>
                   <p className="text-slate-400 text-xs leading-relaxed mb-6 max-w-lg">Analysis of how fluctuating import costs are affecting piling contracts across Lagos State. Our experts weigh in...</p>
-                  <span className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[#001F3F]">Read Analysis <ArrowRight size={14} className="text-[#FFD700]"/></span>
+                  <span className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[#001F3F]">Read Analysis <ArrowRight size={14} className="text-[#FFD700]" /></span>
                 </div>
               </div>
             ))}
@@ -228,7 +206,7 @@ export default function RopacaWebsite() {
         <aside className="lg:w-1/3 space-y-12">
           {/* Trending Now */}
           <div className="bg-slate-50 p-10 rounded-[32px]">
-            <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 mb-8 flex items-center justify-between">Trending Now <ArrowRight size={14}/></h4>
+            <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 mb-8 flex items-center justify-between">Trending Now <ArrowRight size={14} /></h4>
             <div className="space-y-8">
               {[
                 { n: "01", t: "New Tax Levies on Heavy Machinery Imports", c: "INDUSTRY UPDATES" },
@@ -248,34 +226,34 @@ export default function RopacaWebsite() {
 
           {/* Upcoming Event Widget */}
           <div className="bg-[#001F3F] p-10 rounded-[32px] text-white relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-             <span className="bg-[#FFD700] text-[#001F3F] text-[9px] font-black px-3 py-1 rounded mb-6 inline-block">UPCOMING EVENT</span>
-             <h4 className="text-2xl font-black uppercase mb-4 leading-tight">Technical Workshop: Soil Mechanics</h4>
-             <div className="space-y-3 mb-8 text-white/60 text-[10px] font-bold uppercase tracking-widest">
-               <div className="flex items-center gap-3"><Calendar size={14} className="text-[#FFD700]"/> Nov 15, 2024</div>
-               <div className="flex items-center gap-3"><MapPin size={14} className="text-[#FFD700]"/> Eko Hotel & Suites</div>
-             </div>
-             <button className="w-full py-3 bg-white text-[#001F3F] font-black text-[10px] uppercase tracking-widest rounded-lg hover:bg-[#FFD700] transition-all">Register Now</button>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+            <span className="bg-[#FFD700] text-[#001F3F] text-[9px] font-black px-3 py-1 rounded mb-6 inline-block">UPCOMING EVENT</span>
+            <h4 className="text-2xl font-black uppercase mb-4 leading-tight">Technical Workshop: Soil Mechanics</h4>
+            <div className="space-y-3 mb-8 text-white/60 text-[10px] font-bold uppercase tracking-widest">
+              <div className="flex items-center gap-3"><Calendar size={14} className="text-[#FFD700]" /> Nov 15, 2024</div>
+              <div className="flex items-center gap-3"><MapPin size={14} className="text-[#FFD700]" /> Eko Hotel & Suites</div>
+            </div>
+            <button className="w-full py-3 bg-white text-[#001F3F] font-black text-[10px] uppercase tracking-widest rounded-lg hover:bg-[#FFD700] transition-all">Register Now</button>
           </div>
 
           {/* Resources */}
           <div className="bg-white border border-slate-100 p-10 rounded-[32px]">
-             <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 mb-8">Resources</h4>
-             <div className="space-y-4">
-                {[
-                  { t: "Safety Manual PDF", i: <Download />, s: "Updated Oct 2023" },
-                  { t: "Member Directory", i: <ExternalLink />, s: "Access Restricted", lock: true },
-                  { t: "2024 Price Guide", i: <Lock />, s: "Members Only", lock: true }
-                ].map((res, i) => (
-                  <div key={i} className="flex items-center justify-between p-4 rounded-xl border border-slate-50 hover:border-[#FFD700] transition-all cursor-pointer group">
-                    <div>
-                      <h5 className="text-xs font-black text-[#001F3F] uppercase">{res.t}</h5>
-                      <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">{res.s}</p>
-                    </div>
-                    <div className="text-slate-300 group-hover:text-[#001F3F]">{res.i}</div>
+            <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 mb-8">Resources</h4>
+            <div className="space-y-4">
+              {[
+                { t: "Safety Manual PDF", i: <Download />, s: "Updated Oct 2023" },
+                { t: "Member Directory", i: <ExternalLink />, s: "Access Restricted", lock: true },
+                { t: "2024 Price Guide", i: <Lock />, s: "Members Only", lock: true }
+              ].map((res, i) => (
+                <div key={i} className="flex items-center justify-between p-4 rounded-xl border border-slate-50 hover:border-[#FFD700] transition-all cursor-pointer group">
+                  <div>
+                    <h5 className="text-xs font-black text-[#001F3F] uppercase">{res.t}</h5>
+                    <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">{res.s}</p>
                   </div>
-                ))}
-             </div>
+                  <div className="text-slate-300 group-hover:text-[#001F3F]">{res.i}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </aside>
       </section>
@@ -291,9 +269,9 @@ export default function RopacaWebsite() {
         <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-6">Stay Ahead of the Curve</h2>
         <p className="text-white/40 text-sm max-w-xl mx-auto mb-12">Get critical safety alerts, market analysis, and association updates delivered directly to your inbox weekly.</p>
         <div className="max-w-md mx-auto flex flex-col md:flex-row gap-4">
-          <input 
-            type="email" 
-            placeholder="Enter your email address" 
+          <input
+            type="email"
+            placeholder="Enter your email address"
             className="bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-white outline-none focus:border-[#FFD700] transition-all flex-grow text-sm"
           />
           <button className="bg-[#FFD700] text-[#001F3F] px-8 py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-white transition-all">Subscribe</button>
@@ -301,7 +279,7 @@ export default function RopacaWebsite() {
         <p className="text-white/20 text-[9px] font-bold uppercase tracking-widest mt-8">No spam. Unsubscribe at any time.</p>
       </section>
 
-      
+
     </div>
   );
 }

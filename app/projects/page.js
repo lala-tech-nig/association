@@ -2,13 +2,13 @@
 
 import React, { useState } from 'react';
 import Button from "../components/Button";
-import { 
-  Play, 
-  Grid, 
-  HardHat, 
-  Hammer, 
-  Calendar, 
-  ArrowRight, 
+import {
+  Play,
+  Grid,
+  HardHat,
+  Hammer,
+  Calendar,
+  ArrowRight,
   Maximize2,
   Phone,
   Mail,
@@ -43,32 +43,32 @@ const ProjectGalleryPage = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
-      
+
 
       {/* Hero Header */}
       <section className="relative h-[60vh] flex items-center justify-center text-center px-6 overflow-hidden bg-[#001F3F]">
         <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80" 
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80"
             className="w-full h-full object-cover opacity-30 grayscale"
             alt="Engineering background"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#001F3F] via-transparent to-transparent"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-4xl">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-6">
             <span className="w-2 h-2 rounded-full bg-[#FFD700] animate-pulse"></span>
             <span className="text-white text-[10px] font-black uppercase tracking-widest">Visual Archive • 2024</span>
           </div>
-          <h1 className="text-6xl md:text-8xl font-black text-white mb-6 tracking-tighter leading-none">
+          <h1 className="text-4xl md:text-8xl font-black text-white mb-6 tracking-tighter leading-none">
             Engineering <span className="text-[#FFD700]">Lagos</span>
           </h1>
           <p className="text-white/60 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
             A comprehensive documentary of piling, casting, and fabrication defining the skyline of Lagos State.
           </p>
-            <div className="flex flex-wrap justify-center gap-4">
-            <Button onClick={() => alert('Playing showreel...')} variant="primary" className="flex items-center gap-3"><div className="bg-[#001F3F] rounded-full p-1"><Play size={12} className="text-white"/></div>Watch Showreel</Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button onClick={() => alert('Playing showreel...')} variant="primary" className="flex items-center gap-3"><div className="bg-[#001F3F] rounded-full p-1"><Play size={12} className="text-white" /></div>Watch Showreel</Button>
             <Button href="/projects#gallery" variant="secondary">View Gallery</Button>
           </div>
         </div>
@@ -81,17 +81,16 @@ const ProjectGalleryPage = () => {
             <h2 className="text-3xl font-black text-[#001F3F] uppercase tracking-tight">Project Gallery</h2>
             <p className="text-slate-400 text-xs mt-1 uppercase tracking-widest font-bold">Documenting 124 projects across 4 categories</p>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((cat) => (
-              <button 
+              <button
                 key={cat.name}
                 onClick={() => setActiveCategory(cat.name)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-[10px] font-black uppercase tracking-wider transition-all border ${
-                  activeCategory === cat.name 
-                  ? 'bg-[#FFD700] border-[#FFD700] text-[#001F3F] shadow-lg shadow-yellow-200' 
-                  : 'bg-slate-50 border-slate-100 text-slate-400 hover:border-slate-300'
-                }`}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-[10px] font-black uppercase tracking-wider transition-all border ${activeCategory === cat.name
+                    ? 'bg-[#FFD700] border-[#FFD700] text-[#001F3F] shadow-lg shadow-yellow-200'
+                    : 'bg-slate-50 border-slate-100 text-slate-400 hover:border-slate-300'
+                  }`}
               >
                 {cat.icon}
                 {cat.name}
@@ -104,9 +103,9 @@ const ProjectGalleryPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {galleryImages.map((src, i) => (
             <div key={i} className="group relative aspect-square overflow-hidden rounded-2xl bg-slate-100 cursor-pointer">
-              <img 
-                src={src} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" 
+              <img
+                src={src}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
                 alt="Project"
               />
               <div className="absolute inset-0 bg-[#001F3F]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
@@ -130,7 +129,7 @@ const ProjectGalleryPage = () => {
         <div className="max-w-7xl mx-auto bg-[#001F3F] rounded-[40px] p-10 md:p-20 relative overflow-hidden shadow-2xl">
           {/* Decorative Mesh */}
           <div className="absolute top-0 right-0 w-1/2 h-full bg-white opacity-[0.02] -skew-x-12 translate-x-20"></div>
-          
+
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 relative z-10">
             <div>
               <span className="text-[#FFD700] text-[10px] font-black uppercase tracking-[0.4em] mb-4 block">Video Archive</span>
@@ -169,7 +168,7 @@ const ProjectGalleryPage = () => {
         </div>
       </section>
 
-      
+
     </div>
   );
 };
