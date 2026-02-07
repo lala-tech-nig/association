@@ -2,16 +2,16 @@
 
 import React from 'react';
 import Button from "../components/Button";
-import { 
-  HardHat, CheckCircle2, ChevronLeft, ChevronRight, 
-  ArrowRight, Mail, Phone, MapPin, Globe, 
-  Facebook, Twitter, Instagram, Shield 
+import {
+  HardHat, CheckCircle2, ChevronLeft, ChevronRight,
+  ArrowRight, Mail, Phone, MapPin, Globe,
+  Facebook, Twitter, Instagram, Shield
 } from 'lucide-react';
 
 const MembershipPage = () => {
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-900">
-      
+
 
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 px-6 md:px-20 overflow-hidden bg-white">
@@ -30,16 +30,16 @@ const MembershipPage = () => {
               The premier association for pilers and casters in Lagos State. Elevate your craft, expand your network, and shape the infrastructure of tomorrow.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button href="/membership/apply" className="px-8 py-4 font-black text-sm uppercase rounded-xl" variant="primary">Apply for Membership</Button>
-              <Button href="/members" className="px-8 py-4 font-bold text-sm uppercase rounded-xl" variant="secondary">View Benefits</Button>
+              <Button href="/ROPACA_Membership_Guide.pdf" download className="px-8 py-4 font-black text-sm uppercase rounded-xl" variant="primary">Download Our Guide</Button>
+              <Button href="/members" className="px-8 py-4 font-bold text-sm uppercase rounded-xl" variant="secondary">View Our Members</Button>
             </div>
           </div>
           <div className="relative">
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#FFD700]/20 rounded-full blur-3xl"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-[12px] border-white transform md:rotate-2">
-              <img 
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80" 
-                alt="Construction Rig" 
+              <img
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80"
+                alt="Construction Rig"
                 className="w-full h-[500px] object-cover"
               />
             </div>
@@ -58,8 +58,8 @@ const MembershipPage = () => {
               <h2 className="text-4xl font-black text-[#001F3F]">Stories of Progress</h2>
             </div>
             <div className="flex gap-3">
-              <button className="p-3 rounded-full bg-white border border-slate-200 text-slate-400 hover:text-[#001F3F] transition-all"><ChevronLeft size={20}/></button>
-              <button className="p-3 rounded-full bg-white border border-slate-200 text-slate-400 hover:text-[#001F3F] transition-all"><ChevronRight size={20}/></button>
+              <button className="p-3 rounded-full bg-white border border-slate-200 text-slate-400 hover:text-[#001F3F] transition-all"><ChevronLeft size={20} /></button>
+              <button className="p-3 rounded-full bg-white border border-slate-200 text-slate-400 hover:text-[#001F3F] transition-all"><ChevronRight size={20} /></button>
             </div>
           </div>
 
@@ -82,7 +82,7 @@ const MembershipPage = () => {
             </div>
             {/* Card 2 (Partial view imitation) */}
             <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 opacity-60">
-               <div className="relative h-64 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=80" className="w-full h-full object-cover" alt="Site Inspection" />
               </div>
               <div className="p-10">
@@ -119,7 +119,7 @@ const MembershipPage = () => {
             <div className="px-8 pb-10 flex-grow">
               <p className="text-slate-500 text-sm mb-8">For students and apprentices building their career foundation.</p>
               <ul className="space-y-4 mb-10">
-                {[ 'Access to training webinars', 'Mentorship opportunities', 'Digital ID Card' ].map((item, i) => (
+                {['Access to training webinars', 'Mentorship opportunities', 'Digital ID Card'].map((item, i) => (
                   <li key={i} className="flex gap-3 text-xs font-bold text-slate-600">
                     <CheckCircle2 size={16} className="text-green-500 shrink-0" /> {item}
                   </li>
@@ -143,7 +143,7 @@ const MembershipPage = () => {
             <div className="px-8 pb-10 flex-grow">
               <p className="text-slate-400 text-sm mb-8">For certified engineers, pilers, and casters actively working.</p>
               <ul className="space-y-4 mb-10">
-                {[ 'Full voting rights', 'Professional indemnity advice', 'Exclusive job board access', 'Quarterly networking events' ].map((item, i) => (
+                {['Full voting rights', 'Professional indemnity advice', 'Exclusive job board access', 'Quarterly networking events'].map((item, i) => (
                   <li key={i} className="flex gap-3 text-xs font-bold text-white">
                     <CheckCircle2 size={16} className="text-[#FFD700] shrink-0" /> {item}
                   </li>
@@ -166,7 +166,7 @@ const MembershipPage = () => {
             <div className="px-8 pb-10 flex-grow">
               <p className="text-slate-500 text-sm mb-8">For construction firms and suppliers seeking industry authority.</p>
               <ul className="space-y-4 mb-10">
-                {[ 'Brand placement at events', 'Policy advocacy representation', 'Up to 5 individual memberships' ].map((item, i) => (
+                {['Brand placement at events', 'Policy advocacy representation', 'Up to 5 individual memberships'].map((item, i) => (
                   <li key={i} className="flex gap-3 text-xs font-bold text-slate-600">
                     <CheckCircle2 size={16} className="text-green-500 shrink-0" /> {item}
                   </li>
@@ -192,7 +192,7 @@ const MembershipPage = () => {
         </div>
       </section>
 
-      
+
     </div>
   );
 };
