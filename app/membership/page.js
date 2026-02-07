@@ -30,7 +30,7 @@ const MembershipPage = () => {
               The premier association for pilers and casters in Lagos State. Elevate your craft, expand your network, and shape the infrastructure of tomorrow.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button href="/ROPACA_Membership_Guide.pdf" download className="px-8 py-4 font-black text-sm uppercase rounded-xl" variant="primary">Download Our Guide</Button>
+              <Button href="/BYE-LAW FOR ROPACA_Phoenix.pdf" download className="px-8 py-4 font-black text-sm uppercase rounded-xl" variant="primary">Download Our Guide</Button>
               <Button href="/members" className="px-8 py-4 font-bold text-sm uppercase rounded-xl" variant="secondary">View Our Members</Button>
             </div>
           </div>
