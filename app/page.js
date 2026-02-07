@@ -6,6 +6,7 @@ import {
   Construction, Settings, Factory, GraduationCap,
   ArrowRight, Phone, Mail, MapPin, Facebook, Twitter, Linkedin
 } from 'lucide-react';
+import Button from './components/Button';
 
 const ROPACALandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
